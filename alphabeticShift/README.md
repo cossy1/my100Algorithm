@@ -1,6 +1,3 @@
-### Check Out My [YouTube Channel](https://www.YouTube.com/CodingTutorials360)
-
----
 Given a string, replace each its character by the next one in the English alphabet (z would be replaced by a).
 
 **Example**
@@ -10,9 +7,9 @@ alphabeticShift(inputString) = "dsbaz".
 
 **Hints**
 
--   split()
--   indexOf()
--   join()
+- split()
+- indexOf()
+- join()
 
 **Input/Output**
 
@@ -21,7 +18,7 @@ alphabeticShift(inputString) = "dsbaz".
 
 Non-empty string consisting of lowercase English characters.
 
-*Guaranteed constraints:*
+_Guaranteed constraints:_
 
 1 ≤ inputString.length ≤ 10.
 

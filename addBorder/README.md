@@ -1,6 +1,4 @@
-### Check Out My [YouTube Channel](https://www.YouTube.com/CodingTutorials360)
----
-Given a rectangular matrix of characters, add a border of asterisks(*) to it.
+Given a rectangular matrix of characters, add a border of asterisks(\*) to it.
 
 **Example**
 
@@ -8,6 +6,7 @@ For
 
     picture = ["abc",
            "ded"]
+
 the output should be
 
     addBorder(picture) = ["*****",
@@ -16,17 +15,19 @@ the output should be
                       "*****"]
 
 **Hints**
--   concat()
--   unshift()
--   push()
+
+- concat()
+- unshift()
+- push()
 
 **Input/Output**
+
 - **[time limit] 4000ms (js)**
 - **[input] array.string picture**
 
 A non-empty array of non-empty equal-length strings.
 
-*Guaranteed constraints:*
+_Guaranteed constraints:_
 
 1 ≤ picture.length ≤ 5,
 
