@@ -1,0 +1,1 @@
+implement a function which accepts a variable number of argument and check if there is duplicate amongst the numbers.
