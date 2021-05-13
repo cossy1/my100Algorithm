@@ -9,4 +9,4 @@ function ProductOfArr (arr: number[]) {
   return total;
 };
 
-console.log(ProductOfArr([1, 2, 3, 4]));
+console.log(ProductOfArr([1, 2, 3, 4, 5]));

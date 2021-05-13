@@ -13,14 +13,14 @@ function Power (base: number, exponent: number): number {
 console.log(Power(2, 2));
 
 function PowerRecursion (base: number, exponent: number): number {
-  let count = 0;
+  let count = 1;
+  let absExponent = Math.abs(exponent);
   function Helper (num: number) {
-    console.log(count);
-    if ( exponent < count ) return 1;
-      count ++;
-    return num
+    if ( absExponent < count ) return 1;
+    count ++;
+    return num * Helper(num)
   };
-  return base * Helper(base);
+  return exponent < 0 ? 1 / Helper(base) : Helper(base);
 };
 
-console.log(PowerRecursion(2, 3));
+console.log(PowerRecursion(5, -3));
