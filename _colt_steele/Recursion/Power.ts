@@ -24,3 +24,11 @@ function PowerRecursion (base: number, exponent: number): number {
 };
 
 console.log(PowerRecursion(5, -3));
+
+//best
+function Power2 (base: number, exponent: number): number {
+  if (exponent === 0) return 1;
+  return base * Power2(base, exponent - 1);
+};
+
+console.log(Power2(2, 3));
