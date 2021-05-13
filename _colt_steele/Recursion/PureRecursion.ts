@@ -1,6 +1,6 @@
 /**PURE RECURSION**/
 /**Tips :
- * for arrays use methods like slice, concat , spread operator,so you make copies
+ * for arrays use methods like slice, concat, spread operator,so you make copies
  * and not mutate them
  * **/
 //collecting all odd numbers
