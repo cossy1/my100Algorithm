@@ -13,3 +13,16 @@ function reverse2 (str: string) {
 
 console.log(reverse2('1234567'));
 console.log(reverse2('abcdefe'));
+
+
+/**
+ SOLUTION
+ **/
+
+function reverse3 (str: string) {
+  if(str.length <= 1) return str;
+  return reverse(str.slice(1)) + str[0];
+}
+console.log(reverse2('1234567'));
+console.log(reverse2('abcdefe'));
+
