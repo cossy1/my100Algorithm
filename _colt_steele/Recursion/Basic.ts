@@ -1,15 +1,13 @@
 //is texample
 function count(num: number): number {
-  if (num <= 0 ) {
-    console.log('All done');
-    return;
-  }
-  console.log(num);
+  if (num <= 0 ) return;
   num--;
+  console.log(num);
   count(num);
 }
 
 count(10);
+
 
 //2nd example
 function sumRange(num: number): number {

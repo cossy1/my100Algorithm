@@ -1,13 +1,12 @@
 function IsPalindrome(str: string): boolean {
-  let result = false;
-  if (str[0] === str[str.length - 1] && str.length > 1) {
-    result = true;
-    IsPalindrome(str.slice(1, -1));
-  }
-  return result;
+  if(str.length === 1) return true;
+  if(str.length === 2) return str[0] === str[1];
+  if (str[0] === str[str.length - 1]) return IsPalindrome(str.slice(1, -1));
+  return false
 }
 
 console.log(IsPalindrome('abcde'));
-console.log(IsPalindrome('cccch'));
+console.log(IsPalindrome('nan'));
+console.log(IsPalindrome('cccc'));
 console.log(IsPalindrome('ptacocatp'));
 console.log(IsPalindrome('abtacocatba'));

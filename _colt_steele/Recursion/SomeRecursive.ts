@@ -3,19 +3,14 @@
 // Otherwise it returns false
 
 function SomeRecursive (arr: any[], cb: (val: any) => any): boolean {
-  let result = false;
+   if (arr.length === 0) return false;
 
-   if (cb(arr[0]) && arr.length > 0) {
-     console.log(cb(arr[0]));
-     result = true;
+   if (cb(arr[0])) return true;
 
-     SomeRecursive(arr.slice(arr[0]), cb);
-   }
-
-   return result;
+  return SomeRecursive(arr.slice(1),cb);
 }
 
 console.log(SomeRecursive([1, 2, 3, 4], val => val % 2 !== 0));
-// console.log(SomeRecursive([2, 6, 8, 4], (val) => {
-//   return val % 2 !== 0;
-// }));
+console.log(SomeRecursive([2, 6, 8, 4], (val) => {
+  return val % 2 !== 0;
+}));
