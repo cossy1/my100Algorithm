@@ -1,17 +1,15 @@
 function Capitalize(arr: string[]) {
   let newArr = [];
-  if (arr.length === 0) return;
+  let str = '';
+
+  if (arr.length === 0) return newArr;
   for ( var i = 0; i < arr[0].length - 1; i++ ) {
-     let str = '';
      if (i === 0) str = arr[0][i].toUpperCase();
      str += arr[0][i + 1];
-    console.log(str)
-
-    newArr.push(str);
   }
-  console.log(newArr)
-  Capitalize(arr.slice(1));
-  return newArr
+  newArr.push(str);
+  return newArr.concat(Capitalize(arr.slice(1)));
+
 }
 
-Capitalize(['car','taco','banana']);
+console.log(Capitalize(['car','taco','banana']));
