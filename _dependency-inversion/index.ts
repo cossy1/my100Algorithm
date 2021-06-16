@@ -1,6 +1,6 @@
 class Store {
   // stripe: any;
-  paypal: any;
+  paypal: Record<string, any>;
   constructor(user) {
     // this.stripe = new Stripe(user);
     this.paypal = new Paypal()
@@ -41,7 +41,7 @@ store.purchaseHelmet(10);
 /** DEPENDENCY INVERSION **/
 
 class Store2 {
-  paymentProcessor: any;
+  paymentProcessor: Record<string, any>;
 
   constructor(paymentProcessor) {
     this.paymentProcessor = paymentProcessor
@@ -58,7 +58,7 @@ class Store2 {
 
 
 class StripePaymentProcessor {
-  stripe: any;
+  stripe: Record<string, any>;
   constructor(user) {
     this.stripe = new Stripe2(user)
   }
@@ -83,7 +83,7 @@ store2.purchaseBike(10);
 store2.purchaseHelmet(10);
 
 class PaypalPaymentProcessor {
-  paypal: any;
+  paypal: Record<string, any>;
   user: string;
   constructor(user) {
     this.paypal = new Paypal2()
