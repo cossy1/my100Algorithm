@@ -21,7 +21,6 @@ class SinglyLinkedList {
     this.tail = null; /* pointer to tail */
     this.length = 0; /* length */
   }
-
   push(val: any) {
     let newNode = new NodeX(val);
     console.log(newNode)
@@ -35,7 +34,6 @@ class SinglyLinkedList {
     this.length++;
     return this
   }
-
   pop() {
     if (!this.head) return undefined;
     let current = this.head;
