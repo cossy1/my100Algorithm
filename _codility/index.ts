@@ -49,7 +49,7 @@ console.log(solution(433));
 console.log(solution(51272));
 
 
-//Cyclic rotation
+//Cyclic rotation (rotate array by K number of times)
 function solution2(A: Array<any>, K: number): Array<any> {
   const rotateArray = (arr, shiftCount) => {
     console.log(arr.slice(-0));
@@ -63,4 +63,46 @@ function solution2(A: Array<any>, K: number): Array<any> {
   return shiftCount ? rotateArray(A, shiftCount) : A;
 }
 
-console.log(solution2([1,2,3,4], 3))
+console.log(solution2([1,2,3,4], 1));
+console.log(solution2([1,2,3,4], 3));
+
+//odd occurrence
+function solution3(A: Array<any>): string {
+  let base = {};
+  for (let i = 0; i < A.length; i++){
+    if (base.hasOwnProperty(A[i])) {
+      delete base[A[i]];
+    } else {
+      base[A[i]] = 1;
+    }
+  }
+  return Object.keys(base)[0];
+}
+
+console.log(solution3([9, 3, 9, 3, 9, 7, 9]));
+
+//frogJmp
+function solution4(X: number, Y: number, D: number):number {
+  if (X < Y) {
+    return Math.ceil((Y-X)/D);
+  }
+}
+
+console.log(solution4(10, 44, 5));
+
+
+function solution5 (A: Array<any>) {
+  //uniqueness of array element
+  // @ts-ignore
+  if(new Set(A).size === A.length && A.length) {
+    const n = A.length + 1;
+    //istElem + lastElem * num of Arr divided by 2 (series)
+    const sumOfSeries = (n + (n * n - n) / 2);
+    const sumOfArray = A.reduce((acc, curr) => acc + curr);
+    return sumOfSeries - sumOfArray;
+  }
+
+  return 1
+}
+console.log(solution5([1, 2, 3, 5]));
+
