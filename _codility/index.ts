@@ -2,7 +2,7 @@
 //Convert that integer into its binary value
 //Return the length of the largest sequence of zeros in between ones
 //Return 0 if no zeros in between ones
-
+//ITERATIONS
 function solution (N: number): number {
 
   // Tests if our value is an integer
@@ -48,6 +48,7 @@ function getGaps (BinaryArray: Array<string>, gaps: Array<number>) {
 console.log(solution(433));
 console.log(solution(51272));
 
+/** ARRAY **/
 
 //Cyclic rotation (rotate array by K number of times)
 function solution2(A: Array<any>, K: number): Array<any> {
@@ -81,6 +82,8 @@ function solution3(A: Array<any>): string {
 
 console.log(solution3([9, 3, 9, 3, 9, 7, 9]));
 
+/** TIME COMPLEXITY **/
+
 //frogJmp
 function solution4(X: number, Y: number, D: number):number {
   if (X < Y) {
@@ -90,7 +93,7 @@ function solution4(X: number, Y: number, D: number):number {
 
 console.log(solution4(10, 44, 5));
 
-
+//PermMissingElem
 function solution5 (A: Array<any>) {
   //uniqueness of array element
   // @ts-ignore
@@ -106,3 +109,39 @@ function solution5 (A: Array<any>) {
 }
 console.log(solution5([1, 2, 3, 5]));
 
+
+
+//tapeEquilibrium
+/**
+ * For example, consider array A such that:
+
+ A[0] = 3
+ A[1] = 1
+ A[2] = 2
+ A[3] = 4
+ A[4] = 3
+ We can split this tape in four places:
+
+ P = 1, difference = |3 − 10| = 7
+ P = 2, difference = |4 − 9| = 5
+ P = 3, difference = |6 − 7| = 1
+ P = 4, difference = |10 − 3| = 7
+(multi pointer)
+ * **/
+function solution6 (A: Array<any>) {
+  let left = A[0];
+  let right = 0;
+
+  for(let i = 1; i < A.length; i++) {
+    right += A[i]
+  }
+  let min = Math.abs(left - right);
+  for(let i = 1; i < A.length - 1; i++) {
+    left += A[i];
+    right -= A[i];
+    if (min > Math.abs(left - right)) min = Math.abs(left - right)
+  }
+  return min
+}
+
+console.log(solution6([1, 2, 3, 5]));
