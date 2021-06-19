@@ -23,7 +23,6 @@ class SinglyLinkedList {
   }
   push(val: any) {
     let newNode = new NodeX(val);
-    console.log(newNode)
     if (!this.head) {
       this.head = newNode;
       this.tail = this.head
