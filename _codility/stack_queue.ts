@@ -49,7 +49,7 @@ function fish(A, B) {
   let combineArray= [];
   for(let i = 0; i < A.length; i++) {
     if(A[i]){}
-  };
+  }
 }
 
 console.log(fish([4,3,2,1,5],[0,1,0,0,0]));
