@@ -1,13 +1,15 @@
-function adjacentElementsProduct(inputArray: number[]): number {
-  let largestNumProduct = inputArray[0] * inputArray[1];
-
-  for (let i = 1; i < inputArray.length - 1; i++) {
-    const numProduct = inputArray[i] * inputArray[i + 1];
-    largestNumProduct =
-      largestNumProduct > numProduct ? largestNumProduct : numProduct;
+function adjacentElementProduct(array: number[]): number | string {
+  let sum: number[] = [];
+  if (array.length >= 2) {
+    for (
+      let index = 0, i = 0, j = 1;
+      i < array.length && j < array.length;
+      i += 2, j += 2
+    ) {
+      sum[index++] = array[i] * array[j];
+    }
+    return sum.sort()[sum.length - 1];
   }
-  return largestNumProduct;
+  return "not a valid array";
 }
-
-console.log(adjacentElementsProduct([3, 6, -2, -5, 9, 3]));
-console.log(adjacentElementsProduct([-3, -2, 2, -1, -9, 8]));
+adjacentElementProduct([2, 4, 3, 2]);
