@@ -1,4 +1,4 @@
-function sumOddFibonacciNums(num: number): number {
+function sumOddFibonacciNums(num: number) {
 
 }
 
