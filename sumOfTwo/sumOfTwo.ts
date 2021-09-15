@@ -6,11 +6,9 @@ function sumOfTwo(a: number[], b: number[], v: number) {
             if(a[i] + b[j] === v)
                 res = true;
         }
-
     }
 
     return res;
-
 }
 
 console.log(sumOfTwo([1, 2, 3], [10, 20, 30, 40], 42));
