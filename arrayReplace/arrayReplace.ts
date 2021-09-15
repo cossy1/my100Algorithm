@@ -1,5 +1,5 @@
-function arrayReplace(array: number[], elemToRep: number, subElem:number) {
 
+function arrayReplace(array: number[], elemToRep: number, subElem:number) {
     for(let i = 0; i < array.length; i++) {
     
         if(array[i]  === elemToRep) array[i] = subElem;
