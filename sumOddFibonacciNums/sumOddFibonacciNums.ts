@@ -11,24 +11,21 @@ function genNextFibo(seed1:number, seed2:number): number {
 }
 
 function sumOddFibonacciNums(num: number): number {
- let s1:number=0;
- let s2:number=1;
- let nextFiboValue=genNextFibo(s1, s2);
-    console.log(nextFiboValue);
+ let left_seed:number=0;
+ let right_seed:number=1;
+ let nextFiboValue=genNextFibo(left_seed, right_seed);
  let sum:number=1;
- console.log(sum);
-
  while(nextFiboValue<=num){
      if (nextFiboValue%2===1){
          sum=sum+nextFiboValue;
-         s1=s2;
-         s2=nextFiboValue;
-         nextFiboValue=genNextFibo(s1, s2);
+         left_seed=right_seed;
+         right_seed=nextFiboValue;
+         nextFiboValue=genNextFibo(left_seed, right_seed);
 
      }else if(nextFiboValue%2===0){
-         s1=s2;
-         s2=nextFiboValue;
-         nextFiboValue=genNextFibo(s1, s2);
+         left_seed=right_seed;
+         right_seed=nextFiboValue;
+         nextFiboValue=genNextFibo(left_seed, right_seed);
      }
  }
    return sum
