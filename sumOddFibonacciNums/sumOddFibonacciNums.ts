@@ -1,11 +1,5 @@
-/*function genNextOddFibo(seed1:number, seed2:number): number {
-   let newSeed:number=seed1+seed2;
-    if (newSeed%2===0){
-            return genNextOddFibo(seed2, newSeed)    //Applied Conditional Recursion here!!!
-    }else  return newSeed;
-}*/
 
-function genNextFibo(seed1:number, seed2:number): number {
+/*function genNextFibo(seed1:number, seed2:number): number {
     let newSeed:number=seed1+seed2;
     return newSeed;
 }
@@ -29,7 +23,7 @@ function sumOddFibonacciNums(num: number): number {
      }
  }
    return sum
-}
+}*/
 
 console.log(sumOddFibonacciNums(1000));
 console.log(sumOddFibonacciNums(4000000));
