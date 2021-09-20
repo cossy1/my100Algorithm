@@ -7,7 +7,7 @@ function sumOddFibonacciNums(num: number) {
             resArr.push(val)
     }
 
-    let ans = resArr.filter((element) => element%2 !== 0).reduce((a, b) => a + b);
+    let ans = resArr.filter((element) => element % 2 !== 0).reduce((a, b) => a + b);
 
 
     return ans;
