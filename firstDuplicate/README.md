@@ -16,7 +16,6 @@ firstDuplicate(a) = -1.
 
 **Hints**
 -   hasOwnProperty()
-
 **Input/Output**
 
 - **[execution time limit] 5 seconds (ts)**
