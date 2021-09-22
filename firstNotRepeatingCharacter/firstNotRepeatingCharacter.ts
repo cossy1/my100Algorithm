@@ -9,7 +9,7 @@
           }
         }
       
-        if (dupString.length === 0) return "No duplicate found";
+        if (dupString.length === 0) return "No duplicate found"
       
         let min: number = dupString.sort()[0];
       
