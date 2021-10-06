@@ -9,16 +9,12 @@
           }
         }
       
-        if (dupString.length === 0) return "No duplicate found";
+        if (dupString.length === 0) return "No duplicate found"
       
         let min: number = dupString.sort()[0];
       
         console.log(input[min]);
       }
-      firstDuplicate([2, 1, 3, 5, 3, 2]);
-      firstDuplicate([2, 4, 3, 5, 1]);
       
-
-
 console.log(firstNotRepeatingCharacter('abacabad'));
 console.log(firstNotRepeatingCharacter('abacabaabacaba'));
