@@ -1,11 +1,14 @@
-function arrayReplace(inputArray: number[], elemToReplace: number, substitutionElem: number): number[] {
-   const newArray=inputArray.map(item=>{
-       if (item===elemToReplace) {
-           return substitutionElem
-       }
-       else return item
-   });
-    return newArray;
-}
 
-console.log(arrayReplace([1, 2, 1], 1, 3));
+function arrayReplace(array: number[], elemToRep: number, subElem:number) {
+    for(let i = 0; i < array.length; i++) {
+    
+        if(array[i]  === elemToRep) array[i] = subElem;
+    
+    
+    }
+    console.log(array);
+    
+    }
+    let inputArray = [1, 2, 1]; let  elemToReplace = 1; let  substitutionElem = 3;
+    
+    arrayReplace(inputArray, elemToReplace, substitutionElem);
