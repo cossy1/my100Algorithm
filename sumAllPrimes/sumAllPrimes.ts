@@ -19,7 +19,6 @@ function sumAllPrimes(num: number) {
         if(isPrime(arr[j]))
             newArr.push(arr[j])
     }
-git checkout master
     let ans = newArr.reduce((a, b) => a + b);
 
     return ans;

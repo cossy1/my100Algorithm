@@ -5,7 +5,7 @@ function stolenLunch(note: string) {
 
     for(let i=0; i<a.length; i++){
         if(parseInt(a[i])){
-            let point = a.indexOf(a[i])
+            let point = a.indexOf(a[i]);
             a[point] = alphabet[parseInt(a[i])]
         }
 
