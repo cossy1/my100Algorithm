@@ -69,10 +69,10 @@ function solution3(N, A) {
 //missing Integer
 
 function solution4(A) {
-  var max = 0;
-  var array = [];
+  let max = 0;
+  let array = [];
 
-  for (var i = 0; i < A.length; i++) {
+  for (let i = 0; i < A.length; i++) {
     if (A[i] > 0) {
       if (A[i] > max) {
         max = A[i];
@@ -85,7 +85,7 @@ function solution4(A) {
     return 1;
   }
 
-  for (var j = 1; j < max; j++) {
+  for (let j = 1; j < max; j++) {
     if (typeof array[j] === "undefined") {
       return j;
     }
